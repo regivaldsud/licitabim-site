@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="NexoLicita">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b4f8a"/><stop offset=".55" stop-color="#0f6cbd"/><stop offset="1" stop-color="#19c3d6"/></linearGradient>
+    <linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".22"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="116" fill="url(#g)"/>
+  <rect width="512" height="256" rx="116" fill="url(#s)"/>
+  <g stroke="#fff" stroke-opacity=".28" stroke-width="3" fill="none"><path d="M76 120 L176 70 L300 96 L430 64"/><path d="M176 70 L150 170"/><path d="M300 96 L350 190"/></g>
+  <g fill="#fff" fill-opacity=".55"><circle cx="76" cy="120" r="9"/><circle cx="176" cy="70" r="9"/><circle cx="300" cy="96" r="9"/><circle cx="430" cy="64" r="9"/></g>
+  <g transform="translate(86 70) scale(.37) translate(0 960)" fill="#fff"><path d="M173.04-160.78h433q14.13 0 23.76 9.63t9.63 23.76q0 14.13-9.63 23.76T606.04-94H172.48q-14.13 0-23.48-9.63t-9.35-23.76q0-14.13 9.63-23.76t23.76-9.63Zm144.35-200.78L192.96-486q-22.66-22.65-23.16-55.06-.5-32.42 22.72-56.07l28.44-30 237.56 235.57-30 30q-22.65 22.65-55.28 22.65t-55.85-22.65Zm327.65-217.09L409.48-816.22l30-29q23.65-22.08 55.78-21.87 32.13.22 55.35 22.87l124.43 124.44q23.22 23.21 23.22 55.84 0 32.64-23.22 55.29l-30 30Zm165.18 407.82L288.43-692.61 344-748.74l521.78 522.35q11.83 11.82 11.83 27.78t-11.83 27.78Q853.96-159 838-159t-27.78-11.83Z"/></g>
+  <circle cx="404" cy="396" r="30" fill="#19c3d6" stroke="#fff" stroke-width="10"/>
+  <path d="M390 396l10 10 18-20" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
