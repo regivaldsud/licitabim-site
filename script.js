@@ -1,8 +1,8 @@
-/* NexoLicita — site institucional.
+/* LicitaBIM — site institucional.
    CONFIGURE AQUI antes de publicar: */
 document.documentElement.classList.add('js');
 const CONFIG = {
-  DOWNLOAD_URL: '',        // ex.: 'downloads/NexoLicita-Setup-6.3.0.exe' ou o link da página de versões
+  DOWNLOAD_URL: '',        // ex.: 'downloads/LicitaBIM-Setup-6.3.0.exe' ou o link da página de versões
   CONTATO_WHATSAPP: '5569992065695', // WhatsApp de contato (55 + DDD + número)
   CONTATO_EMAIL: '',       // ex.: 'contato@seudominio.com.br'
 };
@@ -34,14 +34,14 @@ $$('[data-download]').forEach(a => {
 const io = 'IntersectionObserver' in window ? new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), { rootMargin: '0px 0px -8% 0px' }) : null;
 $$('.rv').forEach(el => io ? io.observe(el) : el.classList.add('in'));
 
-/* um dia com o NexoLicita */
+/* um dia com o LicitaBIM */
 const DIA = [
   { h: '07:00', t: 'As consultas salvas já rodaram', d: 'Antes de você chegar, cada consulta salva refez a busca no PNCP. As licitações novas da sua área aparecem com o selo Nova, e as que encerraram saem da lista sozinhas.', img: 'consultas-1366-light.png' },
   { h: '08:30', t: 'Triagem por aderência', d: 'Na Busca por área, cada contratação tem uma nota de 0 a 100 com o motivo: objeto, região, valor, prazo e modalidade. Você salva as que valem a pena e descarta o resto.', img: 'busca-continua-1366-light.png' },
   { h: '10:00', t: 'Ler o edital', d: 'O PDF é baixado do PNCP e lido. Em poucos segundos sai o resumo e o checklist de habilitação, com a página e o trecho de cada exigência.', img: 'edital-checklist-1366-light.png' },
   { h: '11:30', t: 'Documentos do cliente', d: 'O checklist é comparado com as certidões cadastradas. Aparece o que está válido, o que vence antes da sessão e o que falta, com o link oficial para emitir.', img: 'documentacao-1366-light.png' },
   { h: '14:00', t: 'Sessão pública', d: 'Durante a disputa, os lances de cada fornecedor entram no ranking com o desconto sobre o estimado. As mensagens do pregoeiro ficam registradas no processo.', img: 'sessao-publica-ranking-1366-light.png' },
-  { h: '16:00', t: 'Tempo real', d: 'Os processos que você acompanha são consultados de novo. Mudou a situação, o prazo ou o valor? O NexoLicita destaca a diferença.', img: 'tempo-real-1366-light.png' },
+  { h: '16:00', t: 'Tempo real', d: 'Os processos que você acompanha são consultados de novo. Mudou a situação, o prazo ou o valor? O LicitaBIM destaca a diferença.', img: 'tempo-real-1366-light.png' },
   { h: '17:30', t: 'Relatório em ABNT', d: 'O dia termina com o relatório do edital ou o dossiê do cliente em PDF, no padrão ABNT, pronto para enviar.', img: 'relatorios-1366-light.png' },
 ];
 const hours = $('#hours'), moment = $('#moment');
@@ -85,8 +85,8 @@ form.addEventListener('submit', e => {
   const d = Object.fromEntries(new FormData(form));
   if (!cnpjValido(d.cnpj)) { fmsg.textContent = 'Confira o CNPJ: os dígitos verificadores não conferem.'; cnpjIn.focus(); return; }
   if (!d.nome.trim()) { fmsg.textContent = 'Informe o seu nome.'; form.nome.focus(); return; }
-  const texto = `Olá! Quero conhecer o NexoLicita.\nNome: ${d.nome}\nCNPJ: ${d.cnpj}\nRamo: ${d.ramo}${d.msg ? '\nMensagem: ' + d.msg : ''}`;
+  const texto = `Olá! Quero conhecer o LicitaBIM.\nNome: ${d.nome}\nCNPJ: ${d.cnpj}\nRamo: ${d.ramo}${d.msg ? '\nMensagem: ' + d.msg : ''}`;
   if (CONFIG.CONTATO_WHATSAPP) { window.open('https://wa.me/' + CONFIG.CONTATO_WHATSAPP + '?text=' + encodeURIComponent(texto), '_blank', 'noopener'); fmsg.textContent = 'Abrimos o WhatsApp com a sua mensagem pronta.'; return; }
-  if (CONFIG.CONTATO_EMAIL) { location.href = 'mailto:' + CONFIG.CONTATO_EMAIL + '?subject=' + encodeURIComponent('NexoLicita — contato') + '&body=' + encodeURIComponent(texto); fmsg.textContent = 'Abrimos o seu e-mail com a mensagem pronta.'; return; }
+  if (CONFIG.CONTATO_EMAIL) { location.href = 'mailto:' + CONFIG.CONTATO_EMAIL + '?subject=' + encodeURIComponent('LicitaBIM — contato') + '&body=' + encodeURIComponent(texto); fmsg.textContent = 'Abrimos o seu e-mail com a mensagem pronta.'; return; }
   fmsg.textContent = 'O canal de contato ainda não foi configurado neste site.';
 });

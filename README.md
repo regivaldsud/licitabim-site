@@ -1,8 +1,8 @@
-# Site do NexoLicita
+# Site do LicitaBIM
 
-Site institucional do **NexoLicita** — licitações públicas com clareza, do edital ao contrato. Feito em Manaus, Amazonas.
+Site institucional do **LicitaBIM** — licitações públicas com clareza, do edital ao contrato. Feito em Manaus, Amazonas.
 
-Publicado pelo GitHub Pages: **https://regivaldsud.github.io/nexolicita-site/**
+Publicado pelo GitHub Pages: **https://regivaldsud.github.io/licitabim-site/**
 
 - `index.html`, `styles.css`, `script.js` — página única, sem build.
 - `img/` — capturas reais do programa; `fonts/` — Inter e Material Symbols (licenças OFL e Apache 2.0).
