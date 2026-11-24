@@ -2,7 +2,7 @@
    CONFIGURE AQUI antes de publicar: */
 document.documentElement.classList.add('js');
 const CONFIG = {
-  DOWNLOAD_URL: '',        // ex.: 'downloads/LicitaBIM-Setup-6.3.0.exe' ou o link da página de versões
+  DOWNLOAD_URL: '',        // vazio = o botão leva ao formulário de contato; ex.: link público do LicitaBIM-Setup-6.3.0.exe
   CONTATO_WHATSAPP: '5569992065695', // WhatsApp de contato (55 + DDD + número)
   CONTATO_EMAIL: '',       // ex.: 'contato@seudominio.com.br'
 };
@@ -26,7 +26,7 @@ $$('[data-download]').forEach(a => {
   a.addEventListener('click', e => {
     e.preventDefault();
     $('#contato').scrollIntoView({ behavior: 'smooth' });
-    const m = $('#formMsg'); m.textContent = 'O link de download será publicado em breve. Deixe seu contato e enviamos o instalador.';
+    const m = $('#formMsg'); m.textContent = 'Deixe seu contato e enviamos o instalador da versão 6.3.0.';
   });
 });
 
@@ -40,6 +40,7 @@ const DIA = [
   { h: '08:30', t: 'Triagem por aderência', d: 'Na Busca por área, cada contratação tem uma nota de 0 a 100 com o motivo: objeto, região, valor, prazo e modalidade. Você salva as que valem a pena e descarta o resto.', img: 'busca-continua-1366-light.png' },
   { h: '10:00', t: 'Ler o edital', d: 'O PDF é baixado do PNCP e lido. Em poucos segundos sai o resumo e o checklist de habilitação, com a página e o trecho de cada exigência.', img: 'edital-checklist-1366-light.png' },
   { h: '11:30', t: 'Documentos do cliente', d: 'O checklist é comparado com as certidões cadastradas. Aparece o que está válido, o que vence antes da sessão e o que falta, com o link oficial para emitir.', img: 'documentacao-1366-light.png' },
+  { h: '12:30', t: 'Parecer de habilitação', d: 'O parecer resume a situação: apta, regularizar ou não apta, com pontuação, risco e o alerta se a proposta ficar abaixo de 75% do estimado. Sai em PDF no padrão ABNT.', img: 'parecer-1366-light.png' },
   { h: '14:00', t: 'Sessão pública', d: 'Durante a disputa, os lances de cada fornecedor entram no ranking com o desconto sobre o estimado. As mensagens do pregoeiro ficam registradas no processo.', img: 'sessao-publica-ranking-1366-light.png' },
   { h: '16:00', t: 'Tempo real', d: 'Os processos que você acompanha são consultados de novo. Mudou a situação, o prazo ou o valor? O LicitaBIM destaca a diferença.', img: 'tempo-real-1366-light.png' },
   { h: '17:30', t: 'Relatório em ABNT', d: 'O dia termina com o relatório do edital ou o dossiê do cliente em PDF, no padrão ABNT, pronto para enviar.', img: 'relatorios-1366-light.png' },
@@ -58,7 +59,11 @@ showHour(0);
 const TOUR = [
   { id: 'busca', ic: 'travel_explore', l: 'Busca por área', img: 'busca-continua-1366-light.png', c: 'Contratações abertas no PNCP, classificadas pela aderência ao seu perfil.' },
   { id: 'editais', ic: 'description', l: 'Editais', img: 'editais-1366-light.png', c: 'Carteira de participação com valor em disputa, prazos e andamento do checklist.' },
-  { id: 'processo', ic: 'gavel', l: 'Processo 360°', img: 'processos-1366-light.png', c: 'Itens, arquivos, resultados e histórico de qualquer compra do PNCP.' },
+  { id: 'consultas', ic: 'saved_search', l: 'Consultas salvas', img: 'consulta-detalhe-1366-light.png', c: 'Licitações guardadas pelo agente, com as novas em destaque e a data em que cada uma foi encontrada.' },
+  { id: 'processo', ic: 'gavel', l: 'Processo 360°', img: 'processos-1366-light.png', c: 'Resumo, itens, arquivos, resultados e histórico de qualquer compra do PNCP.' },
+  { id: 'parecer', ic: 'verified', l: 'Parecer de habilitação', img: 'parecer-1366-light.png', c: 'Recomendação preliminar, pontuação, risco e alerta de exequibilidade, com parecer em PDF no padrão ABNT.' },
+  { id: 'sessao', ic: 'leaderboard', l: 'Sessão pública', img: 'sessao-publica-1366-light.png', c: 'Fases do rito, lances por fornecedor e mensagens do pregoeiro.' },
+  { id: 'clientes', ic: 'groups', l: 'Clientes', img: 'clientes-1366-light.png', c: 'Empresas atendidas, situação dos documentos e editais de cada uma.' },
   { id: 'fornecedores', ic: 'storefront', l: 'Fornecedores', img: 'fornecedores-1366-light.png', c: 'Cadastro na Receita, contratos e itens vencidos por CNPJ.' },
   { id: 'agenda', ic: 'calendar_month', l: 'Agenda', img: 'agenda-1366-light.png', c: 'Aberturas, encerramentos e vencimentos de documentos num só calendário.' },
   { id: 'relatorios', ic: 'monitoring', l: 'Relatórios', img: 'relatorios-1366-light.png', c: 'Painel de mercado com valores reais em R$ e PDF no padrão ABNT.' },
